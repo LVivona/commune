@@ -404,8 +404,8 @@ pip install -e ./
 3. **install npm pm2**
 This is required for the webserver to run
 ```bash 
-chmod +x ./run/* # make sure the scripts are executable
-sudo ./run/install_npm_env.sh # install npm and pm2 (sudo may not be required)
+chmod +x ./scripts/* # make sure the scripts are executable
+sudo ./scripts/install_npm_env.sh # install npm and pm2 (sudo may not be required)
 ```
 
 4. Check if commune is installed correctly, try running the following command
@@ -452,13 +452,13 @@ it is by default stored in ~/modules which can differ depending on your system (
 ### build.sh
 Builds a Docker image for the project.
 ```bash
-./run/build.sh [name]  # name is optional, defaults to repository name
+./scripts/build.sh [name]  # name is optional, defaults to repository name
 ```
 
 ### enter.sh
 Enters a running Docker container in interactive mode.
 ```bash
-./run/enter.sh   # name is optional, defaults to repository name
+./scripts/enter.sh   # name is optional, defaults to repository name
 ```
 
 ### install.sh
@@ -470,7 +470,7 @@ Sets up the development environment by installing required dependencies:
 - Installs the project as a Python package
 
 ```bash
-./run/install.sh
+./scripts/install.sh
 ```
 
 ### start.sh
@@ -483,19 +483,19 @@ Starts a Docker container with the following features:
 - Docker socket access
 
 ```bash
-./run/start.sh [name]  # name is optional, defaults to repository name
+./scripts/start.sh [name]  # name is optional, defaults to repository name
 ```
 
 ### stop.sh
 Stops and removes a running Docker container.
 ```bash
-./run/stop.sh   # name is optional, defaults to repository name
+./scripts/stop.sh   # name is optional, defaults to repository name
 ```
 
 ### test.sh
 Runs project tests in a temporary Docker container.
 ```bash
-./run/test.sh
+./scripts/test.sh
 ```
 
 ## Features
@@ -515,7 +515,7 @@ Runs project tests in a temporary Docker container.
 ## Usage
 
 1. Clone the repository
-2. Run `./run/install.sh` to set up the development environment
+2. Run `./scripts/install.sh` to set up the development environment
 3. Use other scripts as needed for building, starting, stopping, or testing
 
 ## Notes
